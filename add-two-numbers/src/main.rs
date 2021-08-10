@@ -44,11 +44,20 @@ impl Solution {
 }
 
 fn main() {
-    let mut h1 = ListNode { val: 2, next: None };
-    let mut n2 = ListNode::new(4);
-    let mut n3 = ListNode::new(3);
-    n2.next = Some(Box::new(n3));
-    h1.next = Some(Box::new(n2));
+    let n3 = ListNode::new(3);
+    let n2 = ListNode {
+        val: 4,
+        next: Some(Box::new(n3)),
+    };
+
+    let h1 = ListNode {
+        val: 2,
+        next: Some(Box::new(n2)),
+    };
+    match &n2.next {
+        Some(val) => print!("{}", val.val),
+        None => (),
+    }
 
     let mut h2 = ListNode { val: 5, next: None };
     let mut n4 = ListNode::new(6);
