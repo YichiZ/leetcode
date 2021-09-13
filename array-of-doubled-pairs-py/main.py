@@ -1,6 +1,8 @@
 from typing import List
 
-# Need some work
+# Incomplete
+
+
 class Solution:
     def canReorderDoubled(self, arr: List[int]) -> bool:
         arr.sort()
@@ -23,7 +25,8 @@ class Solution:
                 return False
         return True
 
+
 if __name__ == "__main__":
-    arr = [2,4,0,0,8,1]
+    arr = [2, 4, 0, 0, 8, 1]
     sol = Solution()
     print(sol.canReorderDoubled(arr))
